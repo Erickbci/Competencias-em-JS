@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title>Concatenação</title>
+</head>
+<body>
+     <!-- Primeiro capitulo 
+    <h1>Fundamentos do Javascript</h1>
+    Primeiro Capitulo -->
+<div class="card">
+
+    <div class="footer" style="background-color: #69D2E7 ; border-color: black;">
+        <h3>Concatenaçâo</h3>
+
+    </div>
+   
+    
+    <div class="conteudo">
+        <form name="FormConcatena" action="" method="POST">
+            Digite o nome .......   <input type="text" name="nome"> <br>
+            Digite o sobrenome   <input type="text" name="sobrenome"> <br> <br>
+            <input type="button" name="btn_concatena" value="Concatenar" onclick="concatena()">
+            <input type="reset" name="btn_cancelar" value="Cancelar">
+          </form>
+      
+    </div>
+    
+
+</div>
+ 
+    <script>
+
+        // Primeiro conteudo do curso
+        // var js_nome
+
+        // js_nome = window.prompt('Digite aqui seu nome:', 'Digite aqui')
+
+        // document.write('Olá ' + js_nome + '. Seja bem vindo!')
+        // Primeiro conteudo do curso
+
+        
+        var js_nome
+        var js_sobrenome
+        var js_nomecompleto
+
+        function concatena(){
+            js_nome = document.FormConcatena.nome.value 
+            js_sobrenome = document.FormConcatena.sobrenome.value
+
+            js_nomecompleto = js_nome + ' ' + js_sobrenome
+
+            window.alert('Olá, ' + js_nomecompleto + '. Seja bem vindo!')
+        }
+
+    </script>
+</body>
+</html>

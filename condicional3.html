@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title>Condicional 3</title>
+</head>
+<body>
+     
+   <h1>Condicional 3</h1>
+
+    <script>
+
+        var qht //  quantidade de horas trabalhadas
+        var vht //  valor de horas trabalhadas
+        var inss //  desconto de trabalho inss
+        var tdes //  total de descontos
+        var sb //  valor de salario bruto
+        var sl //  valor de salario liquido
+
+        qht = parseFloat(window.prompt('Informe a quantidade de horas trabalhadas/mês (100 a 300)', '00'))
+        vht = parseFloat(window.prompt('Informe o valor da hora trabalhada/mês (25 a 50)', '00'))
+        inss = parseFloat(window.prompt('Informe o percentual de desconto INSS (1 a 20)', '00'))
+        
+        sb = vht * qht
+        tdes = (inss/100) * sb
+        sl = sb - tdes
+
+
+        document.write('<b>DEMNONSTRATIVO DE CÁLCULO DE SALÁRIO LÍQUIDO</b>')
+
+         // HORAS TRABALHADAS QHT
+
+        document.write('<p>Quantidade de horas trabalhadas/mês (100 a 300) => <b> ' + qht + '</b>')
+        if(qht > 300){
+            document.write('<b> Valor Máximo Excedido!</b>')
+        }
+        if(qht < 100){
+            document.write('<b> Valor Mínimo Inválido!</b>')
+        }
+
+        // VALOR DAS HORAS TRABALHADAS VHT
+
+        document.write('<p>Valor da hora trabalhada/mês (25 a 50) => <b> ' + vht + '</b>')
+        if(vht > 50){
+            document.write('<b> Valor Máximo Excedido!</b>')
+        }
+        if(vht < 25){
+            document.write('<b> Valor Mínimo Inválido!</b>')
+        }
+
+        // PERCENTUAL DE DESCONTOS INSS
+
+        document.write('<p>Percentual de desconto INSS (1 a 20) => <b> ' + inss + '</b>')
+        if(inss > 20){
+            document.write('<b> Valor Máximo Excedido!</b>')
+        }
+        if(inss < 1){
+            document.write('<b> Valor Mínimo Inválido!</b>')
+        }
+
+        document.write('<p>===============================================')
+        document.write('<p>Salário Bruto => <b> ' + sb + '</b>')
+        document.write('<p>Total de Desconto => <b>' +tdes + '</b>')
+        document.write('<p>Salário Líquido => <b>' + sl + '</b>')
+         
+        
+        // SAÍDA DE DADOS COM IF E ELSE
+
+        if(sl > 10500){
+            document.write('<b> Sálario Elevado!</b> Maior que 10.500')
+            } 
+            else{
+                    if (sl > 6000) {
+                        document.write('<b> Sálario Satisfatório!</b> Maior que 6.000')
+                     }
+                     else{
+                        if (sl > 3000) {
+                            document.write('<b> Sálario Moderado!</b> Maior que 3.000')
+                     }
+                        else{
+                                document.write('<b> Sálario Insatisfatório!</b> Menor ou igual a 3.000')
+                     
+                        } 
+                    } 
+                }
+
+
+
+        
+
+
+    </script>
+</body>
+</html>

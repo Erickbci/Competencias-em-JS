@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title>Soma</title>
+</head>
+<body>
+     
+    <div class="card">
+
+        <div class="footer" style="background-color: #FA6900;"> 
+            <h2>Soma de Números</h2>
+        </div>
+
+       <div class="conteudo">
+            <form name="FormSomar" action="" method="POST">
+                Digite o 1° Número: <input type="number" name="n1"><p></p>
+                Digite o 2° Número: <input type="number" name="n2"><p></p>
+                <input type="button" name="btn_somar" value="Somar" onclick="somar()">
+                <input type="reset" name="btn_cancelar" value="Cancelar">
+            </form>
+
+       </div>
+
+            
+
+    </div>
+    
+
+
+    <script>
+
+        var n1
+        var n2
+        var soma
+
+        function somar(){
+            n1 = parseInt(document.FormSomar.n1.value)
+            n2 = parseInt(document.FormSomar.n2.value)
+
+            soma = n1 + n2
+
+           window.alert('O resultado é ' + soma.toString() + '!')
+        }
+
+    </script>
+</body>
+</html>

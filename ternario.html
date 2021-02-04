@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title>Operador Ternário</title>
+</head>
+<body>
+     
+    <div class="card">
+
+        <div class="footer" style="background-color: #FA6900;"> 
+            <h2>Operador Ternario</h2>
+        </div>
+
+       <div class="conteudo">
+            <form name="FormSomar" action="" method="POST">
+                Digite um Número: <input type="number" name="n1" id="num1"><p></p>
+                <input type="button" name="btn_conferir" value="Conferir" onclick="conferir()">
+                <input type="reset" name="btn_cancelar" value="Cancelar">
+            </form>
+
+       </div>
+
+            
+
+    </div>
+    
+
+
+
+    <script>
+
+        var tern
+        var sub
+        var num 
+
+        function subtrair() {
+
+            sub = num - 20 
+            
+        }
+
+
+        function conferir(){
+
+            num = parseFloat(document.getElementById('num1').value)
+               
+            document.write('<div class = "card"><p>-----------------------------------------------------------------------------------------');
+                
+            document.write('<p> DEFINIÇÃO E ATRIBUIÇÃO DE VARIÁVEIS')
+            document.write('<p> num = <b>' + num + '</b>; (num recebe o valor ' + num + ')')
+        
+        
+
+            document.write('<p>-----------------------------------------------------------------------------------------</p>')
+            document.write('<p>Operador Ternário <b>( ? : )</b> Com Operadores Relacionais ( ==  != >) </p>')
+            
+
+        //  Colocando em pratica o operador ternario   
+        
+            
+
+            document.write('<p>num <b>!=</b> 20 <b>?</b> "SIM" <b>:</b> "NÃO - Resposta =></p>')
+
+             
+                    num != 20 ? document.write('<b>SIM</b>; É diferente de 20 ('+num+')!') : document.write('<b>NÃO</b>; É igual a 20!');
+
+            document.write('<p>num <b>==</b> 20 <b>?</b> "SIM" <b>:</b> "NÃO - Resposta =></p>')
+                    num == 20 ? document.write('<b>SIM</b>; '+ num + ' é igual a 20!') : document.write('<b>NÃO</b>; O valor é == ' +num +'!') ;
+
+            document.write('<p>num <b><=</b> 50 <b>?</b> "SIM" <b>:</b> "NÃO - Resposta =></p>')
+                    num <= 50 ? document.write('<b>SIM</b>; '+ num + ' é menor ou igual a 50!') : document.write('<b>NÃO</b>; ' + num + ' é maior que 50!');
+
+            document.write('<p>-----------------------------------------------------------------------------------------</p>') 
+
+            document.write('<p> OPERADOR TERNARIO COM EXPRESSÃO ARITMÉTICA</p>')   
+                
+            document.write('<p>(num <b>-</b> 20) <b>==</b> 0 <b>?</b> "SIM" <b>:</b> "NÃO - Resposta =></p> </div>')
+                    num - 20 == 0 ? document.write('<b>SIM</b>; ('+ num + '- 20 = 0)!') : (subtrair() + document.write('<b>NÃO</b> ; O valor de '+num+'- 20 é igual a: <b>' + sub +'!</b>'));
+
+                
+
+             
+
+        }
+
+        
+       
+            
+    </script>
+</body>
+</html>
